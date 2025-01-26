@@ -16,7 +16,7 @@
     int sub(int, int);
     
     /* opDemo.c */
-    #include <math1.h>
+    #include "math1.h"
     #include <stdio.h>
  
     int main()
@@ -31,17 +31,18 @@
     
 // /*
 //     /* Static Linking */
-//     gcc -c add.c  
-//     gcc -c sub.c
-//     ar rs libmath1.a add.o sub.o
-//     gcc -o opDemo opDemo.o libmath1.a 
-//     ./opDemo
+//     cc -c add.c sub.c
+//     ar -cvq libtest.a add.o sub.o
+//     cc opDemo.c libtest.a 
+//     ./a.out
 
 //     /* Dynamic Linking */
-//     gcc -Wall -fPIC -c add.c
-//     gcc -Wall -fPIC -c sub.c
-//     gcc -shared -o libmath1.so add.o sub.o
-//     gcc -o opDemo opDemo.o libmath1.so 
-//     ./opDemo
+//     cc -c add.c sub.c -fPIC
+//     cc -shared -o libctest.so add.o sub.o
+//     cc -L . opDemo.c -l ctest -o dynamic
+//     ./dynamic
+
+//     downloading dynamic linking 
+//     export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
 // */
     
