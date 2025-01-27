@@ -1,12 +1,12 @@
 #include<stdio.h>
-#include<pthread.h>
-#include<sys/types.h>
 #include<stdlib.h>
+#include<sys/types.h>
 #include<unistd.h>
+#include<pthread.h>
 #include<math.h>
 int a[4][4], b[4][4];
 void *matrixeval(void *val) {
-    int *thno = (int*)val;
+    int i int *thno = (int*)val;
     for (int i = 0; i < 4; i++)
         b[(*thno)][i] = a[(*thno)][i];
 

@@ -23,7 +23,7 @@ int read() {
 void* producer(void* param) {
     int waittime, item;
     item = rand() % 5;
-    waittime = rand() % 5;
+    // waittime = rand() % 5;
     sem_wait(&empty);
     pthread_mutex_lock(&mutex);
     printf("\nProducer has produced item: %d\n", item);
@@ -33,7 +33,7 @@ void* producer(void* param) {
 }
 void* consumer(void* param) {
     int waittime, item;
-    waittime = rand() % 5;
+    // waittime = rand() % 5;
     sem_wait(&full);
     pthread_mutex_lock(&mutex);
     item = read();
