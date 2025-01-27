@@ -4,9 +4,11 @@
 #include <pwd.h>      //user info
 #include <grp.h>
 #include <time.h>
+#include <unistd.h>
 
 int main()
 {
+    //execl("/bin/ls", "ls", "-la", NULL);   
     DIR *d;            // directory
     struct dirent *de; // directory entry
     struct stat buf;   // file info
